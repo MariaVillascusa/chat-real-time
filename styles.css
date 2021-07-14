@@ -10,9 +10,13 @@ body {
   height: 530px;
   margin: auto;
   margin-top: 40px;
-  background: url("/images/im6.jpg");
+  background-image: url("images/im6.jpg");
+  background-size: cover;
   border-radius: 10px 10px 0px 0px;
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+    scrollbar-width: thin;
 }
 
 .messages {
@@ -77,3 +81,32 @@ button:hover {
      display: inline-block;
      width: 500px;
  }
+
+
+ /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.container::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.container::-webkit-scrollbar:vertical {
+  width:10px;
+}
+
+.container::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.container::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #6b50d5;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.container::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
